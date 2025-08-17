@@ -4,12 +4,12 @@ from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from sqlalchemy import select, func
 from typing import List, Optional
-from database import Base, engine, get_db
-from models import (
+from estate.database import Base, engine, get_db
+from estate.models import (
     User, Estate, Property, Unit, Tenant, Lease, Invoice, Payment, MaintenanceTicket
 )
-from schemas import *
-from auth import hash_password, verify_password, create_access_token, require_role
+from estate.schemas import *
+from estate.auth import hash_password, verify_password, create_access_token, require_role
 
 app = FastAPI(title="Amen Estate API (5-file compact)")
 

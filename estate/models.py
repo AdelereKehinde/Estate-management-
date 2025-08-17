@@ -3,7 +3,7 @@ from sqlalchemy import (
     Column, Integer, String, Date, DateTime, ForeignKey, Float, Boolean, UniqueConstraint
 )
 from sqlalchemy.orm import relationship, Mapped
-from database import Base
+from estate.database import Base
 
 # ---- Auth / Users ----
 class User(Base):
