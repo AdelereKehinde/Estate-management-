@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Amen Estate – Admin & Resident Portal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root{
       --bg:#0f172a;          /* slate-900 */
@@ -125,6 +126,107 @@
       .kpis{grid-template-columns: repeat(2, 1fr)}
       .field{grid-column: span 12}
     }
+
+
+    .footer {
+  background: rgba(0, 0, 0, 0.8);
+  color: #f1f1f1;
+  padding: 50px 20px 20px;
+  margin-top: 50px;
+  border-top: 2px solid rgba(255,255,255,0.1);
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section h2 {
+  color: #ffd369;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.footer-section h3 {
+  color: #10b981;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.footer-section p, 
+.footer-section ul li a {
+  font-size: 0.95rem;
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a:hover {
+  color: #ffd369;
+}
+
+.footer-section form {
+  display: flex;
+  margin-top: 10px;
+}
+
+.footer-section input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 20px 0 0 20px;
+  outline: none;
+  flex: 1;
+}
+
+.footer-section button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0 20px 20px 0;
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  color: white;
+  cursor: pointer;
+}
+
+.footer-section button:hover {
+  background: linear-gradient(135deg, #ee0979, #ff6a00);
+}
+
+.socials {
+  margin-top: 15px;
+}
+
+.socials a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 1.2rem;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  color: #ffd369;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 15px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
   </style>
 </head>
 <body>
@@ -444,8 +546,60 @@
       </div>
     </div>
   </div>
+  
 
   <div class="toast" id="toast"></div>
+
+  <!-- ================== FOOTER ================== -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- About -->
+    <div class="footer-section">
+      <h2>🏢 Amen Estate</h2>
+      <p>Amen Estate is your trusted platform for managing properties, tenants, and finances with ease. Bringing simplicity and automation to real estate.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Properties</a></li>
+        <li><a href="#">Tenants</a></li>
+        <li><a href="#">Finances</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <p>Email: adelerekehinde01@gmail.com</p>
+      <p>Phone: +234 90 525 1091 0</p>
+      <p>Location: Lagos, Nigeria</p>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-section newsletter">
+      <h3>Stay Updated</h3>
+      <form>
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <div class="socials">
+        <a href="facebook.com"><i class="fab fa-facebook-f"></i></a>
+        <a href="x.com"><i class="fab fa-twitter"></i></a>
+        <a href="linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+        <a href="instagram.com"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Amen Estate. All Rights Reserved.</p>
+  </div>
+</footer>
+
 
   <script>
     // ================= CONFIG =================
@@ -756,6 +910,7 @@
       const route = localStorage.getItem('route') || 'dashboard';
       if(!localStorage.getItem('token')){ show('auth'); } else { show(route); }
     })();
+    
   </script>
 </body>
 </html>

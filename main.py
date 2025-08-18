@@ -174,3 +174,5 @@ def update_ticket(ticket_id: int, status: Optional[str] = None, priority: Option
 def health():
     return {"name": "Amen Estate", "status": "ok"}
 
+
+
