@@ -8,4 +8,5 @@ passlib[bcrypt]
 python-multipart
 email-validator
 python-jose
+PyJWT
 requests
