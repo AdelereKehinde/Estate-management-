@@ -44,7 +44,7 @@ async function apiFetch(path, options = {}) {
         throw new Error(`HTTP ${res.status}: ${text || res.statusText}`);
     }
     const ct = res.headers.get('content-type') || '';
-    return ct.includes('application/json') ? res.json() : res.text();
+    return ct.includes('application/json') ? await res.json() : res.text();
 }
 
 // ================ ROUTING (simple SPA) ================
