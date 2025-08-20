@@ -27,7 +27,7 @@ It allows administrators and managers to handle **estates, tenants, leases, invo
 ---
 
 ## 🛠️ Tech Stack  
-- **Backend:** FastAPI, SQLAlchemy, PostgreSQL  
+- **Backend:** FastAPI, SQLAlchemy
 - **Frontend:** HTML, CSS, JavaScript  
 - **Deployment:** Render (Backend API + Frontend hosting)  
 
