@@ -1,9 +1,9 @@
 
 ### Login Page
-![Login Screenshot](estate1.PNG)
+![Login Screenshot](images/estate1.PNG)
 
 ### Estate Management
-![Estate Screenshot](estate2.PNG)
+![Estate Screenshot](images/estate2.PNG)
 
 
 
